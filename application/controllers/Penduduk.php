@@ -19,9 +19,9 @@ class Penduduk extends CI_Controller
 
     public function form()
     {
-        $this->load->view('templates/header'); //sesuaikan dengan file pada folder views
-        $this->load->view('penduduk/form'); //sesuaikan dengan file pada folder views
-        $this->load->view('templates/footer'); //sesuaikan dengan file pada folder views
+        $this->load->view('templates/header');  //sesuaikan dengan file pada folder views
+        $this->load->view('penduduk/form');  //sesuaikan dengan file pada folder views
+        $this->load->view('templates/footer');  //sesuaikan dengan file pada folder views
     }
 
     public function get_detail()
