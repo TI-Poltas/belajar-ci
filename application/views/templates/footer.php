@@ -11,7 +11,7 @@
 			sukses("<?= $_SESSION['flash'][0] ?>","<?=$_SESSION['flash'][1]?>");
 		<?php 
 		}else{ ?>
-				gagal('".$_SESSION['flash'][0]."','".$_SESSION['flash'][1]."');
+				gagal("<?= $_SESSION['flash'][0] ?>","<?=$_SESSION['flash'][1]?>");
 		<?php
 		} 
 		unset($_SESSION['flash']);
