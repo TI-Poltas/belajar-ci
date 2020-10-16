@@ -9,12 +9,12 @@ class Penduduk extends CI_Controller
         $this->load->model('Penduduk_model');
     }
 
-    public function index()
+    public function index() 
     {
         $data['penduduk'] = $this->Penduduk_model->get_penduduk();
-        $this->load->view('templates/header');
-        $this->load->view('penduduk/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/header');  //sesuaikan dengan file pada folder views
+        $this->load->view('penduduk/index', $data);  //lihat line 14
+        $this->load->view('templates/footer'); 
     }
 
     public function form()

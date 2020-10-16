@@ -31,16 +31,16 @@ class Penduduk_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-    private function _upload_file($data, $file){
+    private function _upload_file($data, $file){ //model untuk upload file gambar
         $pas_foto = $file['pas_foto']['name'];
         if(!$pas_foto){
-            return "assets/img/default.jpg";
+            return "assets/img/default.jpg"; //gambar default akan terisi jika user tidak memaksukkan gambar
         }else{
             $spltName = explode('.',$pas_foto);
             $ext = end($spltName);
-            $config['upload_path']          = './assets/img';
-            $config['allowed_types']        = 'gif|jpg|png';
-            $config['max_size']             = 10240; // 10MB
+            $config['upload_path']          = './assets/img'; //lokasi path gambar yang di upload
+            $config['allowed_types']        = 'gif|jpg|png'; //format file gambar yang boleh di isi
+            $config['max_size']             = 10240; // 10MB | maxsimal ukuran gambar yg boleh di upload
             $config['file_name']            = $data['nik'].'.'.$ext;
             $this->load->library('upload', $config);
 
