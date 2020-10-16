@@ -34,7 +34,7 @@ class Penduduk_model extends CI_Model
     private function _upload_file($data, $file){ //model untuk upload file gambar
         $pas_foto = $file['pas_foto']['name'];
         if(!$pas_foto){
-            return "assets/img/default.jpg"; //gambar default akan terisi jika user tidak memaksukkan gambar
+            return "assets/img/default.png"; //gambar default akan terisi jika user tidak memaksukkan gambar
         }else{
             $spltName = explode('.',$pas_foto);
             $ext = end($spltName);
