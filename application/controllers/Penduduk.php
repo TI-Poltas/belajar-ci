@@ -6,22 +6,22 @@ class Penduduk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Penduduk_model');
+        $this->load->model('Penduduk_model'); //memangggil file Model, sesuaikan nama file di folder Models
     }
 
     public function index() 
     {
         $data['penduduk'] = $this->Penduduk_model->get_penduduk();
         $this->load->view('templates/header');  //sesuaikan dengan file pada folder views
-        $this->load->view('penduduk/index', $data);  //lihat line 14
-        $this->load->view('templates/footer'); 
+        $this->load->view('penduduk/index', $data);  //lihat line 14 $data = penduduk
+        $this->load->view('templates/footer');  //sesuaikan dengan file pada folder views
     }
 
     public function form()
     {
-        $this->load->view('templates/header');
-        $this->load->view('penduduk/form');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/header'); //sesuaikan dengan file pada folder views
+        $this->load->view('penduduk/form'); //sesuaikan dengan file pada folder views
+        $this->load->view('templates/footer'); //sesuaikan dengan file pada folder views
     }
 
     public function get_detail()
